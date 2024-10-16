@@ -1,13 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Enable serving static files from wwwroot
+
 app.UseStaticFiles();
 
 // Main endpoint that displays a welcome message and a link to the CV
 app.MapGet("/", async context =>
 {
-    context.Response.ContentType = "text/html"; // Set the response content type to HTML
+    context.Response.ContentType = "text/html"; 
     await context.Response.WriteAsync(@"
         <html>gg
         <head>
